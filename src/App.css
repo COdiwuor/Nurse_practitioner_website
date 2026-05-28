@@ -1,0 +1,76 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(45, 212, 191, 0.15), transparent 35%),
+    linear-gradient(to bottom, #ecfeff, #f8fafc);
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* Smooth text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* Beautiful scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #14b8a6, #0891b2);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #0f766e, #0e7490);
+}
+
+/* Soft selection colors */
+::selection {
+  background: rgba(20, 184, 166, 0.25);
+  color: #0f172a;
+}
+
+/* Floating background glow */
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px;
+  right: -200px;
+  width: 500px;
+  height: 500px;
+  background: rgba(34, 211, 238, 0.15);
+  filter: blur(100px);
+  z-index: -1;
+  border-radius: 999px;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -200px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  background: rgba(20, 184, 166, 0.12);
+  filter: blur(100px);
+  z-index: -1;
+  border-radius: 999px;
+}
